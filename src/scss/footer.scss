@@ -1,0 +1,218 @@
+.footer {
+    background-color: $dark;
+
+    &__body {
+    }
+}
+//========================================================================================================================================================
+
+.body-footer {
+    @include adaptiveValue("padding-top", 100, 30);
+    @include adaptiveValue("padding-bottom", 50, 30);
+
+    &__container {
+        display: grid;
+        gap: rem(30);
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+        @include adaptiveValue("gap", 30, 15);
+        &:not(:last-child) {
+            padding: 0px 0px rem(30) 0px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__item {
+    }
+
+    &__spoller {
+    }
+
+    &__bottom {
+        display: flex;
+        gap: rem(20);
+        flex-wrap: wrap;
+
+        font-size: rem(14);
+        line-height: math.div(27, 14);
+        color: rgba(255, 255, 255, 0.8);
+        justify-content: space-between;
+        @media (max-width: $mobileSmall) {
+            justify-content: center;
+        }
+    }
+
+    &__rules {
+        max-width: rem(820);
+    }
+
+    &__copy {
+        span {
+            white-space: nowrap;
+        }
+        @media (max-width: $mobileSmall) {
+            text-align: center;
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.spoller-item-footer {
+    &__item {
+        font-size: rem(18);
+        line-height: math.div(22, 18);
+        color: $white;
+    }
+
+    &__title {
+        font-weight: 600;
+        text-transform: uppercase;
+        ._spoller-init & {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(10);
+            &::after {
+                content: "\e900";
+                @extend %ic;
+                font-size: rem(8);
+                transform: rotate(-180deg);
+                transition: transform 0.3s ease 0s;
+            }
+            &._spoller-active {
+                &::after {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+
+    &__body {
+        @include adaptiveValue("padding-top", 30, 20);
+        @include adaptiveValue("padding-bottom", 30, 20);
+    }
+    &__text {
+        line-height: math.div(27, 18);
+        color: rgba(255, 255, 255, 0.8);
+        max-width: rem(318);
+        a {
+            color: $primary;
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.menu-footer {
+    &__list {
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__item {
+        line-height: math.div(27, 18);
+        display: flex;
+        gap: rem(15);
+        &:not(:last-child) {
+            margin-bottom: em(20, 18);
+        }
+        &::before {
+            margin-top: rem(4);
+            font-size: rem(18);
+            flex: 0 0 rem(18);
+            color: $white;
+        }
+        &._icon-footer-mail {
+            &::before {
+                font-size: rem(14);
+            }
+        }
+    }
+
+    &__link {
+        color: rgba(255, 255, 255, 0.8);
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
+
+.social-footer {
+    display: flex;
+    gap: rem(24);
+    align-items: center;
+    &__item {
+    }
+
+    &__link {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.footer-subscribe {
+    &__label {
+        display: block;
+        @include adaptiveValue("font-size", 18, 16, 991.98, 320, 1);
+        line-height: math.div(22, 18);
+        color: rgba(255, 255, 255, 0.8);
+        &:not(:last-child) {
+            margin-bottom: em(10, 18);
+        }
+    }
+
+    &__line {
+        display: flex;
+        position: relative;
+        .form__error {
+            position: absolute;
+            font-size: rem(10);
+            color: red;
+            bottom: rem(-20);
+            left: 0;
+        }
+    }
+
+    &__input {
+        border: 1px solid $white;
+        border-right: none;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: rem(3) 0 0 rem(3);
+        height: rem(50);
+        padding: 0px rem(20);
+        width: 100%;
+        color: rgba(255, 255, 255, 0.52);
+        &:focus {
+            color: $white;
+        }
+    }
+
+    &__button {
+        flex: 0 0 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary;
+        border-radius: 0 rem(3) rem(3) 0;
+        color: $white;
+        &::before {
+            font-size: rem(9);
+            transform: rotate(-90deg);
+        }
+    }
+}

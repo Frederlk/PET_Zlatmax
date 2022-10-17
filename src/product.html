@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Карточка Товара"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page page_inner">
+			<div class="page__header">
+				<div class="page__container">
+					<nav class="page__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="#" class="breadcrumbs__link">
+									Главная
+								</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="#" class="breadcrumbs__link">
+									Разделочные ножи
+								</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">
+									Нож Снегирь
+								</span>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="product">
+				<div class="product__container">
+					<div class="product__main main-product">
+						<div class="main-product__images images-product">
+							<div class="images-product__slider">
+								<div class="images-product__main swiper">
+									<div class="images-product__wrapper swiper-wrapper">
+										<div class="images-product__slide-ibg swiper-slide">
+											<img src="@img/product-page/01.jpg" alt="Нож Снегирь">
+										</div>
+										<div class="images-product__slide-ibg swiper-slide">
+											<img src="@img/product-page/02.jpg" alt="Нож Снегирь">
+										</div>
+										<div class="images-product__slide-ibg swiper-slide">
+											<img src="@img/product-page/03.jpg" alt="Нож Снегирь">
+										</div>
+										<div class="images-product__slide-ibg swiper-slide">
+											<img src="@img/product-page/04.jpg" alt="Нож Снегирь">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="images-product__slider thumbs-images swiper">
+								<div class="thumbs-images__thumbs swiper">
+									<div class="thumbs-images__wrapper swiper-wrapper">
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/product-page/01.jpg" alt="Нож Снегирь">
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/product-page/02.jpg" alt="Нож Снегирь">
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/product-page/03.jpg" alt="Нож Снегирь">
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/product-page/04.jpg" alt="Нож Снегирь">
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="main-product__body body-product">
+							<div class="body-product__header header-product">
+								<div class="header-product__line">
+									<h1 class="header-product__title">Нож Снегирь</h1>
+									<a href="#" class="header-product__link _icon-compare"></a>
+									<a href="#" class="header-product__link _icon-heart"></a>
+								</div>
+								<div class="header-product__line">
+									<div class="header-product__rating rating">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div hide class="rating__value">5</div>
+									</div>
+									<div class="header-product__availibility _yes"></div>
+								</div>
+							</div>
+							<div class="body-product__table table-product">
+								<div class="table-product__label">Артикул:</div>
+								<div class="table-product__value">AF0000001952</div>
+								<div class="table-product__label">Торговая марка:</div>
+								<div class="table-product__value">WUESTHOF (Германия)</div>
+								<div class="table-product__label">Серия:</div>
+								<div class="table-product__value">Ножи серии Classic Ikon</div>
+								<div class="table-product__label">Бонусные баллы:</div>
+								<div class="table-product__value">38</div>
+							</div>
+							<div class="body-product__options options-product">
+								<div class="options-product__label">Сталь</div>
+								<div class="options-product__value">
+									<select name="form[]" class="type">
+										<option value="1" selected>Выбрать сталь</option>
+										<option value="2">110Х18М-ШД</option>
+										<option value="3">40Х10С2М (ЭИ-107)</option>
+										<option value="4">50Х14МФ</option>
+									</select>
+								</div>
+								<div class="options-product__label">Рукоять</div>
+								<div class="options-product__value">
+									<select name="form[]" class="type">
+										<option value="1" selected>Выбрать рукоять</option>
+										<option value="2">95Х18</option>
+										<option value="3">ELMAX</option>
+										<option value="4">RWL-34</option>
+									</select>
+								</div>
+								<div class="options-product__label">Гарда и тыльник</div>
+								<div class="options-product__value">
+									<select name="form[]" class="type">
+										<option value="1" selected>Выбрать гарда и тыльник</option>
+										<option value="2">110Х18М-ШД</option>
+										<option value="3">40Х10С2М (ЭИ-107)</option>
+										<option value="4">50Х14МФ</option>
+									</select>
+								</div>
+								<div class="options-product__label">Обработка клинка</div>
+								<div class="options-product__value">
+									<select name="form[]" class="type">
+										<option value="1" selected>Выбрать обработку клинка</option>
+										<option value="2">95Х18</option>
+										<option value="3">ELMAX</option>
+										<option value="4">RWL-34</option>
+									</select>
+								</div>
+							</div>
+							<div class="body-product__actions actions-product">
+								<div class="actions-product__row">
+									<div class="actions-product__price"><span>3 865</span> ₽</div>
+									<div class="actions-product__tip">
+										+ 449 баллов за покупку
+										<button type="btn">?</button>
+										<div class="actions-product__tip-blanket">
+											Вам будут начислены баллы в размере 5%
+											от стоимости покупки. Их можно будет использовать
+											на оплату последующих заказов.
+										</div>
+									</div>
+								</div>
+								<div class="actions-product__row">
+									<div class="actions-product__quantity quantity">
+										<button type="button" class="quantity__button quantity__button_plus"></button>
+										<div class="quantity__input">
+											<input autocomplete="off" type="text" name="form[]" value="1">
+										</div>
+										<button type="button" class="quantity__button quantity__button_minus"></button>
+									</div>
+									<div class="actions-product__buttons">
+										<a href="#" class="actions-product__cart button _icon-cart">В корзину</a>
+										<a href=" #" class="actions-product__cart button button_black">Купить в 1
+											клик</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info info-product">
+						<div data-tabs class="info-product__tabs tabs">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _tab-active">Описание</button>
+								<button type="button" class="tabs__title">Характеристика</button>
+								<button type="button" class="tabs__title">Отзывы</button>
+								<button type="button" class="tabs__title">Доставка</button>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body">
+									<div class="tabs__text">
+										<p>
+											Легкий удобный нож с клинком, имеющим пологие вогнутые линзовидные спуски на
+											две
+											трети ширины клинка, образующие тонкое,
+											прекрасно режущее лезвие толщиной около 0,6 мм в районе подводов.
+										</p>
+										<p>
+											Обух клинка со спинкой рукояти имеет одну плавную дугообразную линию. На
+											пяте
+											перед рукоятью есть подпальцевый вырез для
+											точных работ.
+										</p>
+										<p>
+											Необходимо проявлять некоторую осторожность при работе с большими боковыми
+											нагрузками на лезвие ножа, ввиду небольшой
+											толщины клинка
+											в рабочей части.
+										</p>
+										<p>
+											Монтаж рукояти накладной плашечный. На навершии рукояти, функцию которого
+											выполняет выступающий из под плашек хвостовик,
+											имеется отверстие под темляк. Этот нож удобный помощник при работе с
+											продуктами
+											и охоте на боровую и водоплавающую дичь.
+										</p>
+									</div>
+
+								</div>
+								<div class="tabs__body">
+									Содержимое второго таба
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__reviews _no-reveiews">
+										<div class="tabs__text">
+											У данного товара нет отзывов. Станьте первым, кто оставил отзыв
+											об этом товаре!
+										</div>
+										<a href="#" class="tabs__button button button_black">Написать отзыв</a>
+									</div>
+								</div>
+								<div class=" tabs__body">
+									Содержимое Четвертого таба
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class=" page__same-products">
+				@@include('html/_products-slider.htm',{
+				"title": "Похожие товары",
+				"more": "",
+				"modifier": "same"
+				})
+			</section>
+
+			<section class="page__recommended-products">
+				@@include('html/_products-slider.htm',{
+				"title": "Рекомендуем",
+				"more": "",
+				"modifier": "recommended"
+				})
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

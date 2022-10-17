@@ -1,0 +1,423 @@
+.product {
+    &__container {
+    }
+
+    &__main {
+        @include adaptiveValue("padding-bottom", 60, 30);
+    }
+
+    &__info {
+        @include adaptiveValue("padding-top", 60, 30);
+        @include adaptiveValue("padding-bottom", 60, 30);
+    }
+}
+
+//========================================================================================================================================================
+
+.main-product {
+    display: grid;
+    gap: rem(20);
+    @media (min-width: $tablet) {
+        gap: rem(30);
+        grid-template-columns: percent(754, 1620) 1fr;
+        @media (max-width: em(1200)) {
+            grid-template-columns: percent(600, 1620) 1fr;
+        }
+    }
+    &__images {
+    }
+}
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+
+.images-product {
+    min-width: 0;
+
+    &__slider {
+        min-width: 0;
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__swiper {
+    }
+
+    &__wrapper {
+    }
+
+    &__slide-ibg {
+        padding-bottom: percent(577, 754);
+    }
+
+    &__thumbs {
+    }
+}
+
+.thumbs-images {
+    &__swiper {
+    }
+
+    &__wrapper {
+    }
+
+    &__slide-ibg {
+        cursor: pointer;
+        padding-bottom: percent(177, 755);
+    }
+}
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+
+.body-product {
+    background-color: $white;
+    @include adaptiveValue("padding", 30, 15);
+    box-shadow: 0px rem(4) rem(20) rgba(0, 0, 0, 0.1);
+    @media (max-width: $mobileSmall) {
+        margin: 0px rem(-15);
+    }
+    &__header {
+        @include adaptiveValue("padding-bottom", 30, 20);
+        @include adaptiveValue("margin-bottom", 30, 20);
+        border-bottom: rem(1) solid rgba(20, 20, 20, 0.15);
+    }
+
+    &__table {
+        @include adaptiveValue("padding-bottom", 30, 20);
+        @include adaptiveValue("margin-bottom", 30, 20);
+        border-bottom: rem(1) solid rgba(20, 20, 20, 0.15);
+    }
+
+    &__options {
+        @include adaptiveValue("padding-bottom", 30, 20);
+        @include adaptiveValue("margin-bottom", 30, 20);
+        border-bottom: rem(1) solid rgba(20, 20, 20, 0.15);
+    }
+
+    &__actions {
+    }
+}
+
+//========================================================================================================================================================
+
+.header-product {
+    &__line {
+        display: flex;
+        align-items: center;
+        gap: rem(30);
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+        @media (max-width: $mobileSmall) {
+            gap: rem(15);
+            flex-wrap: wrap;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(24);
+        line-height: math.div(29, 24);
+        color: $dark;
+        flex: 1 1 auto;
+        @media (max-width: $mobileSmall) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__link {
+        font-size: rem(25);
+        color: $dark;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    &__rating {
+        flex: 1 1 auto;
+    }
+
+    &__availibility {
+        font-size: rem(16);
+        line-height: math.div(20, 15);
+        &._yes {
+            &::before {
+                content: "В наличии";
+            }
+            color: #24ad53;
+        }
+
+        &._no {
+            &::before {
+                content: "Нет в наличии";
+            }
+            color: #e7401b;
+        }
+    }
+}
+
+.table-product {
+    display: grid;
+    gap: rem(20);
+    line-height: math.div(22, 18);
+
+    @media (min-width: $mobile) {
+        grid-template-columns: rem(200) 1fr;
+        @media (max-width: em(1200)) {
+            grid-template-columns: rem(180) 1fr;
+        }
+    }
+    &__label {
+        color: $dark;
+    }
+
+    &__value {
+        color: rgba(20, 20, 20, 0.5);
+    }
+}
+
+.options-product {
+    display: grid;
+    gap: rem(20);
+    align-items: center;
+    @media (min-width: $mobile) {
+        grid-template-columns: rem(200) 1fr;
+        @media (max-width: em(1200)) {
+            grid-template-columns: rem(180) 1fr;
+        }
+    }
+    &__label {
+        line-height: math.div(22, 18);
+        color: $dark;
+    }
+
+    &__value {
+    }
+}
+
+.actions-product {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(30);
+        @media (max-width: em(1470)) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: $tablet) {
+            gap: rem(20);
+        }
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__price {
+        font-weight: 700;
+        font-size: rem(30);
+        line-height: math.div(37, 30);
+    }
+
+    &__tip {
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-size: rem(14);
+        gap: rem(15);
+        line-height: math.div(17, 14);
+        color: rgba(20, 20, 20, 0.5);
+        @media (max-width: $mobileSmall) {
+            flex: 1 1 100%;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+        button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: rem(19);
+            width: rem(19);
+            text-align: center;
+            border-radius: 50%;
+            background-color: rgba(20, 20, 20, 0.3);
+            color: $mainColor;
+
+            font-size: rem(12);
+            line-height: math.div(15, 12);
+        }
+        &._active {
+            .actions-product__tip-blanket {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                .actions-product__tip-blanket {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    &__tip-blanket {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+        position: absolute;
+        bottom: calc(100% + rem(20));
+        background: #fefefe;
+        box-shadow: 0px rem(4) rem(20) rgba(0, 0, 0, 0.05);
+        padding: rem(20);
+        border: rem(2) solid $primary;
+        width: rem(420);
+        @media (min-width: $mobileSmall) {
+            right: rem(-10);
+            &::after {
+                right: rem(6);
+            }
+            &::before {
+                right: rem(5);
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            width: calc(100% + rem(10));
+            left: rem(-10);
+            padding: rem(15);
+
+            &::after {
+                left: rem(6);
+            }
+            &::before {
+                left: rem(5);
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: rem(-24);
+            border: rem(12) solid transparent;
+            border-top: rem(12) solid $white;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: rem(-27);
+            border: rem(13) solid transparent;
+            border-top: rem(13) solid $primary;
+        }
+    }
+
+    &__quantity {
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: rem(30);
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+            flex: 1 1 100%;
+            gap: rem(20);
+        }
+    }
+
+    &__cart {
+        &::before {
+            font-size: rem(19);
+        }
+        flex-direction: row-reverse;
+        gap: rem(15);
+        min-width: rem(228);
+        @media (max-width: $mobile) {
+            flex: 1 1 100%;
+        }
+    }
+}
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+
+.tabs {
+    box-shadow: 0px rem(4) rem(20) rgba(0, 0, 0, 0.1);
+    padding: rem(30);
+    @media (max-width: $mobile) {
+        padding: rem(20) rem(15);
+        margin: 0px rem(-15);
+    }
+    &__navigation {
+        display: flex;
+        border-bottom: rem(1) solid rgba(20, 20, 20, 0.15);
+        @include adaptiveValue("column-gap", 60, 20);
+        @include adaptiveValue("margin-bottom", 30, 20);
+        overflow: auto;
+    }
+
+    &__title {
+        font-size: rem(20);
+        line-height: math.div(24, 20);
+        font-weight: 600;
+        color: rgba(20, 20, 20, 0.5);
+        padding-bottom: rem(20);
+        position: relative;
+        transition: color 0.3s ease 0s;
+        &::after {
+            content: "";
+            position: absolute;
+            height: rem(2);
+            background-color: $primary;
+            width: 0;
+            bottom: 0;
+            left: 0;
+            transition: all 0.3s ease 0s;
+        }
+        &._tab-active {
+            color: $dark;
+            font-weight: 700;
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__content {
+    }
+
+    &__body {
+        color: $dark;
+        line-height: math.div(27, 18);
+    }
+
+    &__text {
+        p {
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 20, 15);
+            }
+        }
+    }
+
+    &__reviews {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+        }
+        .tabs__text {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__button {
+        flex: 0 0 228px;
+        @media (max-width: $mobile) {
+            flex: 1 1 100%;
+        }
+    }
+}
